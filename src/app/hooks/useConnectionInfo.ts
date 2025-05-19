@@ -1,16 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { getClienteInfo, getIpInfo, getIpInfo2, getLocalizacao } from '../services/IpService';
+import { ClientInfoType, getClienteInfo, getIpInfo, getIpInfo2, getLocalizacao, IpInfoCoType, IpInfoType, LocalizacaoType } from '../services/IpService';
 
 export function useConnectionInfo() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [connectionData, setConnectionData] = useState<{
-    clientInfo: any;
-    ipInfo: any;
-    ipInfo2: any;
-    localizacao: any;
+    clientInfo: ClientInfoType;
+    ipInfo: IpInfoType;
+    ipInfo2: IpInfoCoType;
+    localizacao: LocalizacaoType;
   } | null>(null);
 
   useEffect(() => {

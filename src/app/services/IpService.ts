@@ -4,7 +4,7 @@ const CLIENTEINFOCO = `https://ipapi.co/json/`
 const CLIENTEINFO = `https://ipinfo.io/json`
 
 
-interface IpInfoType {
+export interface IpInfoType {
   ip: string;
   hostname: string;
   city: string;
@@ -17,7 +17,7 @@ interface IpInfoType {
   readme: string;
 }
 
-interface IpInfoCoType {
+export interface IpInfoCoType {
   ip: string;
   hostname: string;
   city: string;
@@ -29,7 +29,7 @@ interface IpInfoCoType {
   timezone: string;
   readme: string;
 }
-interface LocalizacaoType {
+export interface LocalizacaoType {
   latitude: number;
   longitude: number;
   localityLanguageRequested: string;
@@ -72,7 +72,7 @@ interface LocalizacaoType {
 }
 
 
-interface ClientInfoType {
+export interface ClientInfoType {
   ipString: string;
   ipNumeric: number;
   ipType: string;
