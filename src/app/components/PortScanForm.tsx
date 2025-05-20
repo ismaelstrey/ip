@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Network, Loader2, Server, Check, X } from 'lucide-react';
 import { useConnectionInfo } from '../hooks/useConnectionInfo';
