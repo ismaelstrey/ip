@@ -147,8 +147,8 @@ export default function PortScanForm() {
           </AnimatePresence>
         </motion.div>
       </div>
-      <div className='fixed top-8 right-8 rotate-90 text-amber-300'>
-      <ArrowDownUp
+      <div className='fixed top-8 right-8 rotate-90 text-red-500'>
+      <X
         className='w-12 h-12 cursor-pointer'
         onClick={() => setShow(!show)}
       />
