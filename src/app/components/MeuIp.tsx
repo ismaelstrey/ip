@@ -11,8 +11,10 @@ export default function MeuIp() {
         )
     }
     return (
-        <div className="flex justify-center min-h-32 text-8xl">
-            {connectionData?.ipInfo.ip}
+        <div className="flex justify-center min-h-24 md:min-h-32 py-4 md:py-8">
+            <span className="text-4xl sm:text-6xl md:text-8xl break-all text-center">
+                {connectionData?.ipInfo.ip}
+            </span>
         </div>
     )
 }

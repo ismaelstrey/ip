@@ -47,7 +47,7 @@ export function ConnectionInfo() {
   }
 
   return (
-    <div className="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 px-4 sm:px-6 md:px-0">
       <motion.div
         variants={cardVariants}
         whileHover="hover"
@@ -58,9 +58,9 @@ export function ConnectionInfo() {
       >
         <div className="flex items-center gap-3 mb-4">
           <FiGlobe className="text-2xl text-primary" />
-          <h2 className="text-xl font-semibold">Informações de IP</h2>
+          <h2 className="text-lg sm:text-xl font-semibold">Informações de IP</h2>
         </div>
-        <div className="space-y-2">
+        <div className="space-y-2 text-sm sm:text-base">
           <p>IP: {connectionData?.ipInfo?.ip}</p>
           <p>Cidade: {connectionData?.ipInfo?.city}</p>
           <p>País: {connectionData?.ipInfo?.country}</p>
@@ -78,9 +78,9 @@ export function ConnectionInfo() {
       >
         <div className="flex items-center gap-3 mb-4">
           <FiMapPin className="text-2xl text-primary" />
-          <h2 className="text-xl font-semibold">Localização</h2>
+          <h2 className="text-lg sm:text-xl font-semibold">Localização</h2>
         </div>
-        <div className="space-y-2">
+        <div className="space-y-2 text-sm sm:text-base">
           <p>Continente: {connectionData?.localizacao?.continent}</p>
           <p>País: {connectionData?.localizacao?.countryName}</p>
           <p>Estado: {connectionData?.localizacao?.principalSubdivision}</p>
@@ -98,9 +98,9 @@ export function ConnectionInfo() {
       >
         <div className="flex items-center gap-3 mb-4">
           <FiMonitor className="text-2xl text-primary" />
-          <h2 className="text-xl font-semibold">Dispositivo</h2>
+          <h2 className="text-lg sm:text-xl font-semibold">Dispositivo</h2>
         </div>
-        <div className="space-y-2">
+        <div className="space-y-2 text-sm sm:text-base">
           <p>Sistema: {connectionData?.clientInfo?.os}</p>
           <p>Navegador: {connectionData?.clientInfo?.family}</p>
           <p>Versão: {connectionData?.clientInfo?.versionMajor}</p>
@@ -118,9 +118,9 @@ export function ConnectionInfo() {
       >
         <div className="flex items-center gap-3 mb-4">
           <FiInfo className="text-2xl text-primary" />
-          <h2 className="text-xl font-semibold">Detalhes Adicionais</h2>
+          <h2 className="text-lg sm:text-xl font-semibold">Detalhes Adicionais</h2>
         </div>
-        <div className="space-y-2">
+        <div className="space-y-2 text-sm sm:text-base">
           <p>Timezone: {connectionData?.ipInfo2?.timezone}</p>
           <p>Hostname: {connectionData?.ipInfo2?.hostname}</p>
           <p>Código Postal: {connectionData?.ipInfo2?.postal}</p>

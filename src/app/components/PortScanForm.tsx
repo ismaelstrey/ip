@@ -45,12 +45,12 @@ export default function PortScanForm() {
   return (
   
     show ? (
-      <div className="fixed top-0 left-0 min-h-screen w-screen bg-zinc-800/80 p-8">
+      <div className="fixed top-0 left-0 min-h-screen w-screen bg-zinc-800/80 p-4 sm:p-6 md:p-8">
       <div className='flex min-w-screen min-h-screen content-center items-center'>
       <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-md min-w-lg  mx-auto rounded-2xl p-6 shadow-xl border bg-neutral-900 border-gray-700"
+          className="w-full max-w-md mx-auto rounded-2xl p-4 sm:p-6 shadow-xl border bg-neutral-900 border-gray-700"
         >
           <div className="flex items-center gap-2 mb-6">
             <Network className="w-6 h-6 text-blue-500" />
