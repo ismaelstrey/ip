@@ -15,19 +15,8 @@ export default function PortScanForm() {
   const [results, setResults] = useState<PortResult[]>([]);
   const {connectionData} = useConnectionInfo();
 
-  const [ip,setIp] = useState('');
-  const [ports,setPorts] = useState('80,443,22');
-
-  useEffect(() => {
-    if(connectionData?.ipInfo.ip){
-      setIp(connectionData?.ipInfo.ip)
-    }
-  })
-
-
-
- 
- 
+  const [ip,setIp] = useState(connectionData?.ipInfo.ip || '');
+  const [ports,setPorts] = useState('80,443,22'); 
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -71,8 +60,9 @@ export default function PortScanForm() {
             <motion.input
               whileFocus={{ scale: 1.01 }}
               type="text"
-              id="ip"
-              value={ip}
+              id="ip" 
+              value={ip}   
+              defaultValue={ip}
               onChange={(e) => setIp( e.target.value )}
               className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-xl text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
               placeholder="Ex: google.com.br ou 192.168.1.1"
@@ -125,7 +115,7 @@ export default function PortScanForm() {
               exit={{ opacity: 0, height: 0 }}
               className="mt-6 space-y-2"
             >
-              <h3 className="text-lg font-medium text-white mb-3">Resultados:</h3>
+              <h3 className="text-lg font-medium text-white mb-3">Resultados:{ip}</h3>
               {results.map((result, index) => (
                 <motion.div
                   key={result.port}
