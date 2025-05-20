@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "framer-motion": "^12.12.1",
-    "next": "15.3.2",
+    "lucide-react": "^0.511.0",
+    "next": "^15.3.2",
+    "portscanner": "^2.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0"
@@ -19,12 +21,12 @@
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/portscanner": "^2.1.4",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
     "tailwindcss": "^4",
     "typescript": "^5"
-  },
-  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+  }
 }
