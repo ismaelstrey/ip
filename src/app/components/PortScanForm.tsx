@@ -45,7 +45,7 @@ export default function PortScanForm() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="max-w-md mx-auto rounded-2xl p-6 shadow-xl border border-gray-700"
+        className="max-w-md mx-auto rounded-2xl p-6 shadow-xl border border-gray-700 bg-red-900"
       >
         <div className="flex items-center gap-2 mb-6">
           <Network className="w-6 h-6 text-blue-500" />
